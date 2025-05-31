@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 3</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <div class="w-full mx-auto">
+      <form class="bg-slate-100 p-5 rounded shadow-md">
+        <h1 class="text-2xl font-bold mb-4">💱 Quy đổi tiền</h1>
+        <div class="bg-white border-l-4 border-blue-600 p-5 mb-3">
+          <p class="font-bold">💡Công thức</p>
+          <p>1 USD = 23.500 VND</p>
+          <p><i>(VND = USD * 23.500)</i></p>
+        </div>
+
+        <div class="mb-4">
+          <label
+            for="soTienCanQuyDoi"
+            class="block text-sm font-medium text-gray-700"
+            >Số tiền USD:</label
+          >
+          <input
+            type="number"
+            id="soTienCanQuyDoi"
+            class="mt-1 block w-full p-2 border border-gray-300 rounded"
+            placeholder="Nhập số tiền USD"
+            required
+          />
+        </div>
+        <button
+          type="button"
+          onclick="callQuyDoiTienTe()"
+          class="bg-blue-500 text-white px-4 py-2 rounded cursor-pointer"
+        >
+          Tính Quy Đổi Tiền
+        </button>
+
+        <div
+          class="bg-green-100 border-l-4 border-green-500 text-green-700 p-4 mt-3"
+          role="alert"
+        >
+          <p class="font-bold">👉 Kết quả</p>
+          <p id="resultQuyDoiTien"></p>
+        </div>
+      </form>
+    </div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>

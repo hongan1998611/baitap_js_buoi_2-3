@@ -97,3 +97,30 @@ function callTinhTrungBinh() {
   showResult(idResult, `Giá trị trung bình: ${giaTriTrungBinh.toFixed(2)}`);
 }
 //---------------------------------------//----------------------------------------------//
+
+//hàm quy đổi tiền tệ
+/*
+input: 
+  nhập vào số tiền cần quy đổi (vd: 1000)  
+  1USD = 23.500VND
+
+process:
+  1. lấy số tiền cần quy đổi từ input
+  2. tính số tiền quy đổi = số tiền cần quy đổi * 23.500
+  3. hiển thị kết quả
+
+output:
+  hiển thị số tiền quy đổi
+  (ví dụ: Số tiền quy đổi: 23.500.000 VNĐ)
+*/
+function callQuyDoiTienTe() {
+  event.preventDefault();
+  let idResult = "resultQuyDoiTien";
+  let soTienCanQuyDoi = document.getElementById("soTienCanQuyDoi").value * 1;
+  if (soTienCanQuyDoi <= 0) {
+    showResult(idResult, "Số tiền cần quy đổi phải lớn hơn 0");
+    return;
+  }
+  let soTienQuyDoi = soTienCanQuyDoi * 23500;
+  showResult(idResult, `Số tiền quy đổi: ${soTienQuyDoi.toLocaleString()} VNĐ`);
+}
