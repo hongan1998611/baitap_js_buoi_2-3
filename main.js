@@ -64,3 +64,36 @@ function callTinhLuong() {
     `Lương nhân viên: ${luongNhanVien.toLocaleString()} VNĐ`
   );
 }
+//---------------------------------------//----------------------------------------------//
+
+// hàm tính giá trị trung bình
+/*
+input: 
+  nhập vào 5 số thực (vd: 1.2, 3.4, 5.6, 7.8, 9.0)
+
+process:
+  1. lấy giá trị của 5 số từ input
+  2. tính tổng các số
+  3. tính giá trị trung bình = tổng các số / 5
+  4. hiển thị kết quả
+
+output:
+  hiển thị giá trị trung bình
+  (ví dụ: Giá trị trung bình: 5.0)
+*/
+function callTinhTrungBinh() {
+  event.preventDefault();
+  let idResult = "resultTinhTrungBinh";
+  // nếu người dùng không nhập thì so = 0
+  let so1 = document.getElementById("soThuNhat").value * 1;
+  let so2 = document.getElementById("soThuHai").value * 1;
+  let so3 = document.getElementById("soThuBa").value * 1;
+  let so4 = document.getElementById("soThuTu").value * 1;
+  let so5 = document.getElementById("soThuNam").value * 1;
+
+  tongSo = so1 + so2 + so3 + so4 + so5;
+  let giaTriTrungBinh = tongSo / 5;
+
+  showResult(idResult, `Giá trị trung bình: ${giaTriTrungBinh.toFixed(2)}`);
+}
+//---------------------------------------//----------------------------------------------//

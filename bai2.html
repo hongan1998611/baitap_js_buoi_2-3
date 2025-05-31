@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 2</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <div class="w-full mx-auto">
+      <form class="bg-slate-100 p-5 rounded shadow-md">
+        <h1 class="text-2xl font-bold mb-4">📚 Tính Giá Trị Trung Bình</h1>
+        <div class="bg-white border-l-4 border-blue-600 p-5 mb-3">
+          <p class="font-bold">💡Công thức</p>
+          <p>Lương = Lương 1 ngày * số ngày làm</p>
+          <p><i>(Giá trị trung bình = Tổng các số / Số lượng)</i></p>
+        </div>
+
+        <div class="flex flex-wrap gap-4 mb-4">
+          <div class="mb-4">
+            <input
+              type="number"
+              id="soThuNhat"
+              class="mt-1 block w-full p-2 border border-gray-300 rounded"
+              placeholder="Số thứ nhất"
+            />
+          </div>
+
+          <div class="mb-4">
+            <input
+              type="number"
+              id="soThuHai"
+              class="mt-1 block w-full p-2 border border-gray-300 rounded"
+              placeholder="Số thứ hai"
+            />
+          </div>
+
+          <div class="mb-4">
+            <input
+              type="number"
+              id="soThuBa"
+              class="mt-1 block w-full p-2 border border-gray-300 rounded"
+              placeholder="Số thứ ba"
+            />
+          </div>
+
+          <div class="mb-4">
+            <input
+              type="number"
+              id="soThuTu"
+              class="mt-1 block w-full p-2 border border-gray-300 rounded"
+              placeholder="Số thứ tư"
+            />
+          </div>
+
+          <div class="mb-4">
+            <input
+              type="number"
+              id="soThuNam"
+              class="mt-1 block w-full p-2 border border-gray-300 rounded"
+              placeholder="Số thứ năm"
+            />
+          </div>
+        </div>
+
+        <button
+          onclick="callTinhTrungBinh()"
+          class="bg-blue-500 text-white px-4 py-2 rounded cursor-pointer"
+        >
+          Tính Giá Trị Trung Bình
+        </button>
+
+        <div
+          class="bg-green-100 border-l-4 border-green-500 text-green-700 p-4 mt-4"
+          role="alert"
+        >
+          <p class="font-bold">👉 Kết quả</p>
+          <p id="resultTinhTrungBinh"></p>
+        </div>
+      </form>
+    </div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
