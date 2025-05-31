@@ -9,55 +9,40 @@
   <body>
     <div class="w-full mx-auto">
       <form class="bg-slate-100 p-5 rounded shadow-md">
-        <h1 class="text-2xl font-bold mb-4">
-          📏 Tính Diện Tích, Chu Vi Hình Chữ Nhật
-        </h1>
+        <h1 class="text-2xl font-bold mb-4">🧮 Tính Tổng 2 Ký Số</h1>
         <div class="bg-white border-l-4 border-blue-600 p-5 mb-3">
           <p class="font-bold">💡Công thức</p>
-          <p>Diện tích = chiều dài * chiều rộng</p>
-          <p>Chu vi = 2 * (chiều dài + chiều rộng)</p>
+          <p>Tổng = số hàng chục + số hàng đơn vị</p>
+          <p><i>Ví dụ: 12 => 1 + 2 = 3</i></p>
         </div>
 
         <div class="mb-4">
-          <label for="chieuDai" class="block text-sm font-medium text-gray-700"
-            >Chiều dài:</label
+          <label for="soKySo" class="block text-sm font-medium text-gray-700"
+            >Nhập số:</label
           >
           <input
             type="number"
-            id="chieuDai"
+            id="soKySo"
             class="mt-1 block w-full p-2 border border-gray-300 rounded"
-            placeholder="Nhập chiều dài"
-            required
-          />
-        </div>
-
-        <div class="mb-4">
-          <label for="chieuRong" class="block text-sm font-medium text-gray-700"
-            >Chiều rộng:</label
-          >
-          <input
-            type="number"
-            id="chieuRong"
-            class="mt-1 block w-full p-2 border border-gray-300 rounded"
-            placeholder="Nhập chiều rộng"
+            placeholder="Nhập số có 2 chữ số"
             required
           />
         </div>
 
         <button
           type="button"
-          onclick="callTinhDienTichChuVi()"
+          onclick="callTongKySo()"
           class="bg-blue-500 text-white px-4 py-2 rounded cursor-pointer"
         >
-          Tính Diện Tích, Chu Vi
+          Tính Tổng 2 Ký Số
         </button>
 
         <div
           class="bg-green-100 border-l-4 border-green-500 text-green-700 p-4 mt-3"
           role="alert"
         >
-          <p class="font-bold">👉 Kết quả</p>
-          <p id="resultTinhDienTichChuVi"></p>
+          <p class="font-bold">👉 Kết quả:</p>
+          <p id="resultTongKySo"></p>
         </div>
       </form>
     </div>

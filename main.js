@@ -142,3 +142,33 @@ function callTinhDienTichChuVi() {
 
   showResult(idResult, `Diện tích: ${dienTich}, Chu vi: ${chuVi}`);
 }
+
+//-------------------/hàm tính tổng 2 ký số/------------------//
+/*
+input: 
+  nhập vào số có 2 ký số (vd: 23)
+process:
+  1. lấy số có 2 ký số từ input
+  2. tách các ký số ra
+  3. tính tổng các ký số = ký số hàng chục + ký số hàng đơn vị
+  4. hiển thị kết quả 
+output:
+  hiển thị tổng các ký số
+  (ví dụ: Tổng các ký số: 5)
+*/
+function callTongKySo() {
+  event.preventDefault();
+  let idResult = "resultTongKySo";
+  let soKySo = document.getElementById("soKySo").value * 1;
+
+  if (soKySo < 10 || soKySo > 99) {
+    showResult(idResult, "Số phải có 2 chữ số (từ 10 đến 99)");
+    return;
+  }
+
+  let hangChuc = Math.floor(soKySo / 10);
+  let hangDonVi = soKySo % 10;
+  let tongKySo = hangChuc + hangDonVi;
+
+  showResult(idResult, `Tổng các ký số: ${tongKySo}`);
+}
