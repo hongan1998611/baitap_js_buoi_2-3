@@ -1,0 +1,12 @@
+.btn-tab::before {
+  content: "📒";
+}
+
+.active {
+  color: white;
+  background-color: #3b82f6;
+}
+
+.active::before {
+  content: "📖";
+}
